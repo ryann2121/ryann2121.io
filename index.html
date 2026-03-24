@@ -1,8 +1,250 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <title>My site</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ryan | Digital Analytics</title>
+
+  <style>
+    :root {
+      --primary: #5a67d8;
+      --bg: #f7f7f7;
+      --text: #333;
+      --card-bg: #fff;
+    }
+
+    /* Dark mode variables */
+    .dark {
+      --bg: #1a1a1a;
+      --text: #e5e5e5;
+      --card-bg: #2a2a2a;
+      --primary: #8b9bff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    header {
+      text-align: center;
+      padding: 4rem 2rem;
+      background: linear-gradient(135deg, var(--primary), #764ba2);
+      color: #fff;
+      position: relative;
+    }
+
+    header h1 {
+      font-size: 2.6rem;
+      margin-bottom: 0.5rem;
+    }
+
+    nav {
+      margin-top: 1.5rem;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 0.4rem 0.8rem;
+      border-radius: 4px;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      background: rgba(255,255,255,0.2);
+    }
+
+    /* Dark mode toggle button */
+    #toggleDark {
+      position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
+      background: rgba(255,255,255,0.2);
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      color: #fff;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    #toggleDark:hover {
+      background: rgba(255,255,255,0.35);
+    }
+
+    main {
+      max-width: 850px;
+      margin: auto;
+      padding: 3rem 1.5rem;
+    }
+
+    section {
+      margin-bottom: 3rem;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      border-bottom: 3px solid var(--primary);
+      display: inline-block;
+      padding-bottom: 0.3rem;
+    }
+
+    .projects-grid {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+
+    .card {
+      background: var(--card-bg);
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    }
+
+    .card h3 {
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+    }
+
+    .tag {
+      background: var(--primary);
+      color: #fff;
+      padding: 0.4rem 0.9rem;
+      border-radius: 20px;
+      font-size: 0.9rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #222;
+      color: #aaa;
+      margin-top: 2rem;
+    }
+  </style>
 </head>
-  <body>
-    <hi>My Site</hi>
-  </body>
+
+<body>
+
+  <header>
+    <h1>Your Name</h1>
+    <p>Digital Analytics Specialist • Data Storyteller • Optimization Strategist</p>
+
+    <button id="toggleDark">🌙 Dark Mode</button>
+
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Work</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        I’m a digital analytics professional focused on turning data into meaningful insights.
+        I help teams understand user behavior, optimize performance, and make smarter decisions
+        through measurement, experimentation, and clear storytelling.
+      </p>
+    </section>
+
+    <section id="projects">
+      <h2>Analytics Work</h2>
+
+      <div class="projects-grid">
+
+        <div class="card">
+          <h3>Conversion Funnel Analysis</h3>
+          <p>
+            Deep‑dive analysis of user drop‑off across key funnel stages, identifying
+            optimization opportunities and quantifying potential impact.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Dashboard Automation</h3>
+          <p>
+            Built automated reporting dashboards for marketing and product teams,
+            reducing manual reporting time and improving decision‑making speed.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>A/B Testing Insights</h3>
+          <p>
+            Designed and analyzed experiments to validate hypotheses, measure uplift,
+            and guide product strategy with statistically sound results.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+
+      <div class="skills">
+        <span class="tag">Google Analytics</span>
+        <span class="tag">GA4</span>
+        <span class="tag">Tag Manager</span>
+        <span class="tag">SQL</span>
+        <span class="tag">Python</span>
+        <span class="tag">Data Visualization</span>
+        <span class="tag">A/B Testing</span>
+        <span class="tag">Attribution</span>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: <strong>your@email.com</strong></p>
+    </section>
+
+  </main>
+
+  <footer>
+    © 2025 Your Name — Data‑Driven by Design
+  </footer>
+
+  <script>
+    const toggle = document.getElementById("toggleDark");
+    toggle.addEventListener("click", () => {
+      document.body.classList.toggle("dark");
+      toggle.textContent = document.body.classList.contains("dark")
+        ? "☀️ Light Mode"
+        : "🌙 Dark Mode";
+    });
+  </script>
+
+</body>
 </html>
